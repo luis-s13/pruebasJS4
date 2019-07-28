@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Chat Mesa de ayuda</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<form>
+			<ul class="form-style-1">
+			    <li>
+			    	<label>
+			    		Franja Horaria (AM/PM), marque las dos casillas para completa
+			    		<span class="required">*</span>
+			    	</label>
+			    	<input type="text" id="team1-name" class="field-divided" placeholder="Franja1" />&nbsp;<input type="text" id="team1-goals" class="field-divided" placeholder="franja2" />
+			    </li>
+			    <li>
+			    	<label>
+			    		Nombre/Curso (si es aspirante, no aplica)
+			    		<span class="required">*</span>
+			    	</label>
+			    	<input type="text" id="team2-name" class="field-divided" placeholder="Name" />&nbsp;<input type="text" id="team2-goals" class="field-divided" placeholder="Course" />
+			    </li>
+			    <li>
+			        <label>
+			        	Descripcion del asunto
+			        	<span class="required">*</span>
+			        </label>
+			        <textarea id="desc" class="field-long field-textarea"></textarea>
+			    </li>
+			    <li>
+			        <input type="button" id="submit-button" value="Send" />
+			    </li>
+			</ul>
+		</form>
+		<script src="socket.io/socket.io.js"></script>
+		<script src="js/chatMesa.js"></script>
+	</body>
+</html>

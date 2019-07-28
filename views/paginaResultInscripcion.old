@@ -1,0 +1,11 @@
+{{>header}}
+
+<h4>
+{{accionInscribir documentoE correoE nombreE telefonoE idcursoE}}
+</h4> 
+  <form action="/InicioAspirante" method="post">
+
+     <button class="btn btn-dark">Regresar a Inscripción</button>
+
+ </form>
+{{>footer}}

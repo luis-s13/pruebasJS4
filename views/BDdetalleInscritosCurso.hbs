@@ -1,0 +1,35 @@
+{{>header}}
+
+
+<h3>
+Curso seleccionado:  ( {{ idcE}} )<br>
+  {{cursoseleccionado}} 
+<br>
+</h3> 
+
+{{{BDcrearFormActions listadoInscritos idcE}}}
+<p>Lista de inscritos del curso</p>
+  <table class="class">
+{{{BDlistarInscritosCurso listadoInscritos idcE}}}
+  </table>
+
+  <form action="/BDInscritosCoordinador" method="post">
+
+     <button class="btn btn-dark">Seleccionar otro Curso</button>
+
+ </form>
+
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+
+
+
+{{>footer}}

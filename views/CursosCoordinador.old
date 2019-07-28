@@ -1,0 +1,82 @@
+{{>header}}
+
+<h2>Bienvenido Coordinador</h2>
+<h3>Información de Cursos</h3>
+<p>
+<strong>A continuacion se listan todos los cursos</strong>
+</p> 
+ <style>
+
+
+  table.courses th {
+    background-color: rgb(107, 143, 121);
+    color:black
+  }
+
+  table.courses td {
+    background-color:lightgray;
+    color: rgb(43, 40, 40)
+  }
+
+    .collapsible {
+  background-color: rgb(150, 150 , 150);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #637a6b;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+  </style>
+  
+  
+  <br>
+  
+  <table class="table">
+{{{listarcursosadmin}}}
+  </table>
+
+<br>
+
+ <form action="/estadoCambiado" method="post"> 
+<strong> En caso de desear cambiar el estado de un curso,<br> 
+seleccionelo y haga click en cambiar estado:<br> </strong>
+            <select id="mySelect" name="listacursos" onchange="myFunction()">
+                {{{ValoresSelectAllCursos}}}
+            </select>   
+<input type="number" id="idc" name="idcurso" value=1 readonly><br>
+
+ <input type="submit" value="Cambiar Estado"> 
+ </form>
+
+<br>       
+  <script>
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+<br>
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+
+
+{{>footer}}

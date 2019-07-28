@@ -1,0 +1,67 @@
+{{>header}}
+
+<h2>Inscripción</h2>
+<p>
+<strong>Ingrese los datos de inscripción a continuación</strong>
+</p> 
+
+ <form action="/paginaResultInscripcion" method="post"> 
+  <table>
+ 
+   <tr>
+       <td>
+         Documento de Identidad<br> 
+         <input type="number" name="docidentidad" min="100000" required><br> 
+       </td>
+       <td>
+         Correo electrónico:<br> 
+         <input type="email" name="correo" required><br> 
+       </td>
+   </tr>
+ 
+   <tr>
+       <td>
+           Nombre del aspirante:<br> 
+           <input type="text" name="nombre" required><br> 
+       </td>
+       <td>
+           Teléfono:<br> 
+           <input type="number" name="telefono" min="1000000" required><br> 
+       </td>
+   </tr>
+ 
+    <tr>
+       <td>
+           (seleccione un curso):<br> 
+            <select id="mySelect" name="listacursos" onchange="myFunction()">
+                {{{ValoresSelectCursos}}}
+            </select>
+       </td>
+       <td>
+           Id del Curso:<br>
+           <!--p id="leido"></p-->
+           <input type="number" id="idc" name="idcurso" value=1 readonly><br> 
+       </td>
+   </tr>
+
+
+  </table>
+ 
+<!--  https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onchange-->
+
+
+<!--p id="leido"></p-->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+
+ <input type="submit" value="Enviar"> 
+ </form> 
+
+{{>footer}}

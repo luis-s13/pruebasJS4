@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- THIS LINE -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Cursos de Extensión</title> 
+	<link href="css/basic.css" rel="stylesheet"type="text/css">	
+</head>
+<body>
+<header>
+<img src="/img/tdeaLogo.PNG" alt="Logo TdeA">
+<table>
+  <tr>
+    <!--th> <a href="InfoInteresado">| Oferta Actual</a> </th-->
+  </tr>
+ </table>
+</header>
+<h2>Cursos Disponibles</h2>
+
+ <style>
+
+
+  table.courses th {
+    background-color: rgb(107, 143, 121);
+    color:black
+  }
+
+  table.courses td {
+    background-color:lightgray;
+    color: rgb(43, 40, 40)
+  }
+
+    .collapsible {
+  background-color: rgb(150, 150 , 150);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #637a6b;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+  </style>
+  
+  
+
+<br>
+
+{{{BDlistarcursosCssOld listadoCursos}}}
+
+
+
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+
+<h2>Inscripciones</h3>
+<p>
+<strong>Si esta interesado en un curso, 
+  <a href="/registroUsuario">registrese</a> 
+ o 
+ <a href="/">inicie sesión</a>
+
+</strong>
+</p> 
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+<footer>
+ 
+	<p>Derechos reservados</p>
+	Dirección: Ciudad Universitaria - Colombia - Suramérica<br>  
+    Horario de atención al público<br> 
+    8:00 a.m. a 12:00 m. y  de 1:00 p.m. a 5:30 p.m. 
+    de lunes a jueves, Viernes de 7:00 a.m. a 12:00 m. y 1:00 p.m. a 4:30 p.m. 
+    <br><strong>Webmaster:Luis Diaz</strong> 
+
+</footer>
+
+</body>
+</html>

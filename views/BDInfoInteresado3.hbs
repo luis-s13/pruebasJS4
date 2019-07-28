@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- THIS LINE -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Cursos de Extensión</title> 
+	<link href="css/basic.css" rel="stylesheet"type="text/css">	
+</head>
+<body>
+<header>
+<img src="/img/tdeaLogo.PNG" alt="Logo TdeA">
+<table>
+  <tr>
+    <!--th> <a href="InfoInteresado">| Oferta Actual</a> </th-->
+  </tr>
+ </table>
+</header>
+<h2>Cursos Disponibles</h2>
+<!--
+{{{listarDisponibles listadoCursos}}}
+-->
+{{{listarDisponiblesModal listadoCursos}}}
+
+<!--
+
+<button type="button" class="btn btn-primary" data-toggle="modal" 
+data-target="#exampleModalLong1">
+ Curso 1
+</button>
+
+<div class="modal fade" 
+  id="exampleModalLong1" tabindex="-1" role="dialog" 
+  aria-labelledby="exampleModalLongTitle1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" 
+        id="exampleModalLongTitle1">Curso 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Este curso presenta tecnicas de aprendizaje no supervisado
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!---->
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+<br>
+
+<h2>Inscripciones</h3>
+<p>
+<strong>Si esta interesado en un curso, 
+  <a href="/registroUsuario">registrese</a> 
+ o 
+ <a href="/">inicie sesión</a>
+
+</strong>
+</p> 
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+<footer>
+ 
+	<p>Derechos reservados</p>
+	Dirección: Ciudad Universitaria - Colombia - Suramérica<br>  
+    Horario de atención al público<br> 
+    8:00 a.m. a 12:00 m. y  de 1:00 p.m. a 5:30 p.m. 
+    de lunes a jueves, Viernes de 7:00 a.m. a 12:00 m. y 1:00 p.m. a 4:30 p.m. 
+    <br><strong>Webmaster:Luis Diaz</strong> 
+
+</footer>
+
+</body>
+</html>

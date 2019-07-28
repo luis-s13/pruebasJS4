@@ -1,0 +1,43 @@
+{{>header}}
+
+<h2>Listado de Cursos</h2>
+<p>
+
+
+{{{listarBD listadoCursos}}}
+</p> 
+
+<form action="/BDestadoCambiado" method="post"> 
+<strong>Si desea cambiar el estado de un curso,<br> 
+seleccionelo y haga click en cambiar estado:<br> </strong>
+            <select id="mySelect" name="listacursos" onchange="myFunction()">
+                {{{BDvaloresSelectAllCursos listadoCursos}}}
+            </select>   
+<input type="number" id="idc" name="idcurso" value=1 readonly><br>
+
+ <input type="submit" value="Cambiar Estado"> 
+ </form>
+
+<br>       
+  <script>
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+<br>
+
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-info">Volver a la pagina Inicial del Coordinador</button>
+
+ </form>
+   <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+
+{{>footer}}

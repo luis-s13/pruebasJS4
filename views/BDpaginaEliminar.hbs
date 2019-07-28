@@ -1,0 +1,43 @@
+{{>header}}
+
+Se elimina al estudiante {{nombreE}}
+del curso con Id:{{idcE}}<br>
+A continuacion se listan nuevamente los inscritos para el curso: 
+{{{BDeliminarInscrito nombreE idcE}}}
+
+  <table class="class">
+    <thead class="thead-dark">
+{{{BDlistarInscritosCursoSinBotones listadoInscritos idcE}}}
+  </table>
+
+<script>
+  //https://stackoverflow.com/questions/6985507/one-time-page-refresh-after-first-page-load
+  window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
+</script>
+
+
+  <form action="/BDInscritosCoordinador" method="post">
+
+     <button class="btn btn-dark">Seleccionar otro Curso</button>
+
+ </form>
+
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+
+
+{{>footer}}

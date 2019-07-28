@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- THIS LINE -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Cursos de Extensión</title> 
+	<link href="css/basic.css" rel="stylesheet"type="text/css">	
+</head>
+<body>
+<header>
+<img src="/img/tdeaLogo.PNG" alt="Logo TdeA">
+
+
+<picture>
+  <img src={{{imgpath nombre}}} alt="avatarP">
+</picture>
+
+<h2>Datos Personales</h2>
+<p>
+<strong>Verifique sus datos y actualice su foto a continuación</strong>
+
+</p>
+
+  <table>
+ 
+   <tr>
+       <td>
+         Documento de Identidad<br> 
+         <input type="number" name="docidentidad" min="100000" value={{documento}}  readonly><br> 
+       </td>
+       <td>
+         Correo electrónico:<br> 
+         <input type="email" name="correo" value={{correo}} readonly><br> 
+       </td>
+   </tr>
+ 
+   <tr>
+       <td>
+           Nombre del aspirante:<br> 
+           <input type="text" name="nombre" value={{nombre}} readonly><br> 
+       </td>
+       <td>
+           Teléfono:<br> 
+           <input type="number" name="telefono" min="1000000" value={{telefono}} readonly><br> 
+       </td>
+   </tr>
+
+ <tr>
+   <td>
+    <form action="/paginaActualizarFoto" method="post" enctype="multipart/form-data"> 
+          <br>
+           <strong>(Haga click para cargar una imagen): </strong>
+           <br>
+          <label>Foto de Perfil</label>
+           <input type="file" class="form-control" name="archivo"><br>
+           <div>
+          <button class="btn btn-info">Actualizar Foto</button> 
+          </div>
+    </form> 
+  </td>
+
+  <td>
+
+  </td>
+
+  </tr>
+  </table>
+
+
+<div>
+  <form action="/respuestaAspirante" method="post">
+     <button class="btn btn-dark">Regresar a la pagina de inicio del aspirante</button>
+ </form>
+</div>
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+<footer>
+ 
+	<p>Derechos reservados</p>
+	Dirección: Calle 78B No. 72A - 220 Medellín - Colombia - Suramérica<br>  
+    Horario de atención al público<br> 
+    7:30 a.m. a 12:00 m. y  de 1:00 p.m. a 5:30 p.m. 
+    de lunes a jueves, los viernes de 7:30 a.m. a 12:00 m. y 1:00 p.m. a 4:30 p.m. 
+    <br><strong>Webmaster:Luis Diaz</strong> 
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{{>header}}
+
+<h2>Menu de Inscritos</h2>
+<br>Para ver el detalle de estudiantes en un curso, seleccione un curso de la lista y de click en detalle:
+
+ <form action="/detalleInscritosCurso" method="post"> 
+
+            <select id="mySelect2" name="listacursos" onchange="myFunction()">
+                {{{ValoresSelectCursos}}}
+            </select>
+            <input type="number" id="idc1" name="idcursosel" value=1 readonly><br> 
+    <script>
+      function myFunction() {
+        var x = document.getElementById("mySelect2").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc1").value = x;
+        //alert(x);
+      }
+    </script>
+
+ <input type="submit" value="Detalle"> 
+ </form> 
+<br>
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+
+
+{{>footer}}

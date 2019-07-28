@@ -1,0 +1,56 @@
+{{>header}}
+
+<h2>Creación de Cursos</h2>
+<p>
+Digite la informacion del curso en el formulario siguiente:
+</p> 
+<form action="/paginaCursoCreado" method="post"> 
+ <table>
+
+  <tr>
+      <td>
+        Id<br> 
+        <input type="number" name="id" min="1" max="20" required><br> 
+      </td>
+      <td>
+        Nombre del Curso:<br> 
+        <input type="text" name="curso" required><br> 
+      </td>
+  </tr>
+
+  <tr>
+      <td>
+          Modalidad:<br> 
+          <input type="text" name="modalidad" value="Virtual"><br> 
+      </td>
+      <td>
+          Costo (en dolares):<br> 
+          <input type="number" name="costo" min="1" max="1000" required><br> 
+      </td>
+  </tr>
+
+  <tr>
+      <td>
+          Descripción:<br> 
+          <input type="text" name="descripcion" required><br> 
+      </td>
+      <td>
+          Intensidad Horaria:<br> 
+          <input type="number" name="intensidad"  min="2" max="100"><br>
+      </td>
+  </tr>
+
+ </table>
+
+<button> Enviar </button>
+
+</form>
+
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+           
+
+{{>footer}}

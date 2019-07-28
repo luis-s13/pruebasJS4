@@ -1,0 +1,26 @@
+{{>header}}
+
+
+<h2>
+{{{BDcambiarEstado idcursoB}}}
+</h2> 
+
+
+  <form action="/BDcursosCoordinador" method="post">
+
+     <button class="btn btn-info">Regresar a la lista de cursos</button>
+
+ </form>
+
+
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+{{>footer}}

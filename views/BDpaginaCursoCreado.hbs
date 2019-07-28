@@ -1,0 +1,22 @@
+{{>header}}
+
+<p>
+  <strong>
+Resultado de la operacion: 
+</strong><br>
+{{resultadoRegistrarCurso}}
+</p> 
+
+
+ <div></div>
+  <form action="/BDCreacionCurso" method="post">
+
+     <button class="btn btn-info">Volver a la pagina de CreacionCurso</button>
+
+ </form>
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+{{>footer}}

@@ -1,0 +1,92 @@
+{{>header}}
+
+<div class="container">
+  <h2>Registro de Usuarios Nuevos</h2>
+  <br>
+  <p>Ingrese los siguientes datos</p>
+  <form action="/enviarUsuario" method="post">
+    <div class="form-group">
+
+      <div class="row">
+
+        <div class="col">
+          <label >Nombre</label>
+          <input type="text"  class="form-control"  name="nombre" placeholder="Nombre de usuario" required>     
+       </div>
+
+       <div class="col">
+          <label >Documento</label>
+          <input type="text"  class="form-control"  name="documento" placeholder="Cédula o Identificación" required><br>      
+        </div>
+
+     </div>
+
+      <div class="row">
+
+        <div class="col">
+          <label >Contraseña</label>
+          <input type="password" class="form-control"  id="password" name="password" placeholder="Contraseña" required>
+        </div>
+
+        <div class="col">
+          <label >*</label>
+          <input type="password" class="form-control" placeholder="Confirmar contraseña" id="confirm_password" required><br>
+        </div>
+     </div>
+
+      <div class="row">
+
+        <div class="col">
+          <label >Telefono</label>
+          <input type="number"  class="form-control"  name="telefono"  min="1000000" required>
+        </div>
+
+        <div class="col">
+          <label >Rol</label>
+          <input type="text"  class="form-control"  name="rol"  value="Aspirante" readonly><br>      
+        </div>
+     </div>      
+
+      <label >Correo</label>
+      <input type="email"  class="form-control"  name="correo" placeholder="Ingrese un correo valido" required><br>      
+     <br>
+
+     <button type="submit" class="btn btn-dark">Enviar</button>
+   </div>
+   
+    <script>
+	//basado en https://codepen.io/diegoleme/pen/surIK 
+		var password = document.getElementById("password")
+		, confirm_password = document.getElementById("confirm_password");
+
+		function validatePassword(){
+		if(password.value != confirm_password.value) {
+		confirm_password.setCustomValidity("Contraseñas no coinciden");
+		} else {
+		confirm_password.setCustomValidity('');
+		}
+		}
+
+		password.onchange = validatePassword;
+		confirm_password.onkeyup = validatePassword;
+    </script>   
+   
+ </form>	
+</div>
+
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+
+<p>
+<br>
+ Si desea ver la oferta de cursos como interesado, haga click <a href="BDInfoInteresado">Aqui</a>
+<br>
+ En caso de requerir registrarse con un rol distinto, 
+ reporte su caso al administrador <a href="mailto:webmaster@extension.com">webmaster@extension.com</a>
+</p> 
+
+
+{{>footer}}

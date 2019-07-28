@@ -1,0 +1,11 @@
+body {
+	color: #grey;
+	font-family:arial;
+	min-height:100vh
+}
+
+footer{
+	color: purple;
+	border-top: 2px solid purple;
+	margin-top:16px;
+}

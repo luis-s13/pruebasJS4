@@ -1,0 +1,22 @@
+{{>header}}
+
+<h4>
+Se actualizó la foto de perfil
+</h4>
+
+<picture>
+  <img src={{{imgpath nombre}}} alt="avatarP">
+</picture>
+
+  <form action="/respuestaAspirante" method="post">
+
+     <button class="btn btn-dark">Regresar al menu del aspirante</button>
+
+ </form>
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+
+{{>footer}}

@@ -1,0 +1,32 @@
+{{>header}}
+
+{{{eliminarInscrito nombreE idcE}}}
+<h2>
+Estudiante {{nombreE}} fue eliminado del curso  <br>
+</h2> 
+
+<style>
+ table.enrolled td {
+      background-color:lightgray;
+      color: rgb(43, 40, 40)
+    }
+  </style>
+
+<h2>
+Curso: {{{CursoSeleccion idcE}}} <br>
+</h2> 
+
+{{{crearFormActions idcE}}}
+
+  <table class="enrolled">
+{{{listarInscritosCurso idcE}}}
+  </table>
+
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+
+
+{{>footer}}

@@ -1,0 +1,16 @@
+body{
+	/*Gray can be set using equal values for  light sources*/
+	background-color: #F0F0F0;
+	color: #053f3f;
+}
+
+
+h1{
+	color: hsl(160, 86%, 16%);
+	margin-left: 20px;
+}
+
+footer{
+	color:rgb(46, 43, 43);
+	font-size:70%;
+}

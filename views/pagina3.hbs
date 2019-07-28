@@ -1,0 +1,100 @@
+{{>header}}
+
+<h2>Visualización de Cursos</h2>
+<p>
+<strong>Información Administrador</strong>
+</p> 
+ <style>
+
+
+  table.courses th {
+    background-color: rgb(107, 143, 121);
+    color:black
+  }
+
+  table.courses td {
+    background-color:lightgray;
+    color: rgb(43, 40, 40)
+  }
+
+    .collapsible {
+  background-color: rgb(150, 150 , 150);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #637a6b;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+  </style>
+  
+  
+  <br>
+  
+  <table class="courses">
+{{{listarcursosadmin}}}
+  </table>
+
+<br>
+<strong>Cambiar estado de un Curso (administrador)</strong>
+ 
+
+
+
+ <form action="/estadoCambiado" method="post"> 
+(seleccione un curso para cambiar su estado):<br> 
+            <select id="mySelect" name="listacursos" onchange="myFunction()">
+                {{{ValoresSelectAllCursos}}}
+            </select>   
+<input type="number" id="idc" name="idcurso" value=1 readonly><br>
+
+ <input type="submit" value="Cambiar Estado"> 
+ </form>
+
+<br>
+<!--
+<strong>Ver Información de un Curso Abierto (Interesado)</strong>
+<div></div>
+{{{listarcursosinteresado}}}
+
+
+
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+-->
+{{>footer}}

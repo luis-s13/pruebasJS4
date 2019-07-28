@@ -1,0 +1,91 @@
+{{>header}}
+
+
+<p>
+<small>Su rol actual: <strong>Interesado</strong> </small> 
+</p> 
+
+
+ <style>
+
+  table.courses th {
+    background-color: rgb(107, 143, 121);
+    color:black
+  }
+
+  table.courses td {
+    background-color:lightgray;
+    color: rgb(43, 40, 40)
+  }
+
+    .collapsible {
+  background-color: rgb(150, 150 , 150);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #637a6b;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+  </style>
+  
+ 
+
+
+
+<h2>Cursos Abiertos</h2>
+
+<div></div>
+{{{listarcursosinteresado}}}
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+
+<br>
+<h2>Inscripciones</h3>
+<p>
+<strong>Si esta interesado en un curso, 
+  <a href="/registroUsuario">registrese</a> 
+ o 
+ <a href="/">inicie sesión</a>
+
+</strong>
+</p> 
+
+
+<!--small><strong>Volver a la pagina de <a href="/">Inicio</a></strong></small-->
+
+{{>footer}}

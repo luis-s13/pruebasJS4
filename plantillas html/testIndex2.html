@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Página de Creación de Cursos</title>
+
+<link rel="stylesheet" type="text/css" href="basic.css">
+
+
+</head> 
+
+<body> 
+  <img src="tdeaLogo.PNG" alt="Logo TdeA">
+
+
+<table>
+  <tr>
+    <th> <a href="testIndex.html">| Inicio</a> </th>
+    <th> <a href="testIndex2.html">| Crear Curso</a> </th>
+    <th> <a href="testIndex3.html">| Ver Cursos</a> </th>
+    <th> <a href="testIndex4.html">| Inscribir</a> </th>
+    <th> <a href="testIndex5.html">| Ver Inscritos</a> </th>
+  </tr>
+ </table>
+
+<strong>Creación de Cursos</strong>
+<br> 
+
+<form> 
+ <table>
+
+  <tr>
+      <td>
+        Id<br> 
+        <input type="number" name="id" min="1" max="20" required><br> 
+      </td>
+      <td>
+        Nombre del Curso:<br> 
+        <input type="text" name="curso" required><br> 
+      </td>
+  </tr>
+
+  <tr>
+      <td>
+          Modalidad:<br> 
+          <input type="text" name="modalidad" value="Virtual"><br> 
+      </td>
+      <td>
+          Valor (en dolares):<br> 
+          <input type="number" name="valor" min="1" max="1000" required><br> 
+      </td>
+  </tr>
+
+  <tr>
+      <td>
+          Descripción:<br> 
+          <input type="text" name="descripcion" required><br> 
+      </td>
+      <td>
+          Intensidad Horaria:<br> 
+          <input type="number" name="intensidad"  min="2" max="100"><br>
+      </td>
+  </tr>
+
+ </table>
+
+
+
+<input type="submit" value="Enviar"> 
+</form> 
+
+</body>

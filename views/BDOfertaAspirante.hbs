@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- THIS LINE -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Cursos de Extensión</title> 
+	<link href="css/basic.css" rel="stylesheet"type="text/css">	
+</head>
+<body>
+<header>
+<img src="/img/tdeaLogo.PNG" alt="Logo TdeA">
+<table>
+  <tr>
+    <!--th> <a href="InfoInteresado">| Oferta Actual</a> </th-->
+  </tr>
+ </table>
+</header>
+<h2>Cursos Disponibles</h2>
+<h4>A continuacion se listan los cursos disponibles</h4>
+{{{listarDisponibles listadoCursos}}}
+<br>
+
+<h2>Inscripciones</h2>
+<h4>Haga click en el siguiente botón</h4>
+  <div>
+    <form action="/Inscribirse" method="get">
+       <button class="btn btn-dark">Inscripción</button>
+    </form>
+  </div>
+  <div>
+  <form action="/respuestaAspirante" method="post">
+     <button class="btn btn-dark">Regresar a la pagina de inicio del aspirante</button>
+ </form>
+</div>
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+
+
+<footer>
+ 
+	<p>Derechos reservados</p>
+	Dirección: Calle 78B No. 72A - 220 Medellín - Colombia - Suramérica<br>  
+    Horario de atención al público<br> 
+    7:30 a.m. a 12:00 m. y  de 1:00 p.m. a 5:30 p.m. 
+    de lunes a jueves, los viernes de 7:30 a.m. a 12:00 m. y 1:00 p.m. a 4:30 p.m. 
+    <br><strong>Webmaster:Luis Diaz</strong> 
+
+</footer>
+
+</body>
+</html>

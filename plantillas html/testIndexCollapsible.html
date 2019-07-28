@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Visualización de Cursos</title>
+
+<link rel="stylesheet" type="text/css" href="basic.css">
+
+
+</head> 
+
+<body> 
+  <img src="tdeaLogo.PNG" alt="Logo TdeA">
+
+
+<table>
+  <tr>
+    <th> <a href="testIndex.html">| Inicio</a> </th>
+    <th> <a href="testIndex2.html">| Crear Curso</a> </th>
+    <th> <a href="testIndex3.html">| Ver Cursos</a> </th>
+    <th> <a href="testIndex4.html">| Inscribir</a> </th>
+    <th> <a href="testIndex5.html">| Ver Inscritos</a> </th>
+  </tr>
+ </table>
+
+ <style>
+
+  table.courses th {
+    background-color: rgb(107, 143, 121);
+    color:black
+  }
+
+  table.courses td {
+    background-color:lightgray;
+    color: rgb(43, 40, 40)
+  }
+
+  .collapsible {
+  background-color: rgb(150, 150 , 150);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #637a6b;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+</style>
+
+ <strong>Visualización de Cursos (administrador)</strong>
+<br> 
+
+
+  </head>
+  <body>
+  
+  
+  <br>
+  
+  <table class="courses">
+    <tr>
+      <th>Id<br>Curso</th>
+      <th>Nombre<br>Curso</th>
+      <th>Descripción del Curso</th>
+      <th>Costo<br>(USD)</th>
+      <th>Modalidad</th>
+      <th>Intensidad</th> 
+   
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Curso1</td>
+      <td>Descripción del Curso 1</td>
+      <td>40</td>
+      <td>Virtual</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Curso2</td>
+      <td>Descripción del Curso 2</td>
+      <td>32</td>
+      <td>Presencial</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Curso3</td>
+      <td>Descripción del Curso 3</td>
+      <td>36</td>
+      <td>Virtual</td>
+      <td>80</td>
+    </tr>
+  </table>
+
+
+<strong>Visualización de Cursos (Interesado)</strong>
+
+<!---  Based on https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible  -->
+<button class="collapsible">Curso 1 [+]</button>
+<div class="content">
+  <strong>ID: </strong>
+  <em>1</em><br>
+  <strong>Nombre del Curso:</strong>
+  <em>Curso 1</em><br>
+  <strong>Descripcion:</strong>
+  <em>Descripcion del curso #1</em><br>
+  <strong>Modalidad:</strong>
+  <em>Presencial</em><br>
+  <strong>Costo:</strong>
+  <em>100 USD</em><br>
+  <strong>Intensidad</strong>
+  <em>32 horas</em><br>
+ </div>
+<button class="collapsible">Curso 2 [+]</button>
+<div class="content">
+    <strong>ID: </strong>
+  <em>2</em><br>
+  <strong>Nombre del Curso:</strong>
+  <em>Curso 2</em><br>
+  <strong>Descripcion:</strong>
+  <em>Descripcion del curso #2</em><br>
+  <strong>Modalidad:</strong>
+  <em>Presencial</em><br>
+  <strong>Costo:</strong>
+  <em>120 USD</em><br>
+  <strong>Intensidad</strong>
+  <em>40 horas</em><br>
+</div>
+<button class="collapsible">Curso 3 [+]</button>
+<div class="content">
+    <strong>ID: </strong>
+  <em>3</em><br>
+  <strong>Nombre del Curso:</strong>
+  <em>Curso 3</em><br>
+  <strong>Descripcion:</strong>
+  <em>Descripcion del curso #3</em><br>
+  <strong>Modalidad:</strong>
+  <em>Presencial</em><br>
+  <strong>Costo:</strong>
+  <em>120 USD</em><br>
+  <strong>Intensidad</strong>
+  <em>40 horas</em><br>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Visualización de Inscritos</title>
+
+<link rel="stylesheet" type="text/css" href="basic.css">
+
+
+  <style>
+
+
+    table.enrolled th {
+      background-color: rgb(107, 143, 121);
+      color:black
+    }
+  
+    table.courses td {
+      background-color:lightgray;
+      color: rgb(43, 40, 40)
+    }
+  </style>
+</head> 
+
+<body> 
+  <img src="tdeaLogo.PNG" alt="Logo TdeA">
+
+
+<table>
+  <tr>
+    <th> <a href="testIndex.html">| Inicio</a> </th>
+    <th> <a href="testIndex2.html">| Crear Curso</a> </th>
+    <th> <a href="testIndex3.html">| Ver Cursos</a> </th>
+    <th> <a href="testIndex4.html">| Inscribir</a> </th>
+    <th> <a href="testIndex5.html">| Ver Inscritos</a> </th>
+  </tr>
+ </table>
+
+ <strong>Visualización total de Inscritos</strong>
+ <br> 
+
+
+
+  <table class="enrolled">
+    <tr>
+      <th>Documento</th>
+      <th>Estudiante</th>
+      <th>Correo</th>
+      <th>Telefono</th>
+      <th>Eliminar</th>
+   
+    </tr>
+    <tr>
+        <td>10101099</td>
+        <td>Estud1</td>
+        <td>mail1@gmail.com</td>
+        <td>3201234567</td>
+        <td><button type="button" onclick="alert('Eliminar1')">Eliminar1</button></td>
+    </tr>
+
+    <tr>
+      <td>10101098</td>
+      <td>Estud2</td>
+      <td>mail2@gmail.com</td>
+      <td>3201234567</td>
+      <td><button type="button" onclick="alert('Eliminar2')">Eliminar2</button></td>
+    </tr>
+    <tr>
+      <td>10101097</td>
+      <td>Estud3</td>
+      <td>mail3@gmail.com</td>
+      <td>3201234567</td>
+      <td><button type="button" onclick="alert('Eliminar3')">Eliminar3</button></td>
+    </tr>
+  </table>
+
+  <p>Seleccione un curso de la lista</p>
+
+<!--  https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onchange-->
+ Cursos Disponibles:<br> 
+ <select id="mySelect" onchange="myFunction()">
+  <option value="1">Curso 1</option>
+  <option value="2">Curso 2</option>
+  <option value="3">Curso 3</option>
+</select>
+
+<p id="leido"></p>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        document.getElementById("leido").innerHTML = "Valor seleccionado: " + x;
+        //alert(x);
+      }
+    </script>
+
+</body>

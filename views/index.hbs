@@ -1,0 +1,27 @@
+{{>header}}
+<!--Hasta aqui parte del header para no mostrar links--->
+<div class="container">
+  <h2>Bienvenido a los cursos de Extensión</h2>
+  <br>
+  <p>Para autenticarse con un rol específico, inicie sesión</p>
+  <form action="/autenticarUsuario" method="post">
+    <div class="form-group">
+      <label >Nombre</label>
+      <input type="text"  class="form-control"  name="nombre" placeholder="Nombre de usuario" required><br>   
+      <label >Contraseña</label>
+      <input type="password"  class="form-control"  name="password" placeholder="Contraseña" required><br>       
+     <br>
+     <button class="btn btn-dark">Ingresar</button>
+   </div>
+ </form>	
+</div>
+
+<p>
+<br>
+ Si desea ver la oferta de cursos como Interesado, haga click <a href="BDInfoInteresado">Aqui</a>
+<br>
+ Si dispone de datos para darse de alta como usuario nuevo, haga click <a href="registroUsuario">Aqui</a>
+</p> 
+
+
+{{>footer}}

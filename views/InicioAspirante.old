@@ -1,0 +1,139 @@
+{{>header}}
+<h3>
+Bienvenido Aspirante
+</h3> 
+
+ <style>
+
+  table.courses th {
+    background-color: rgb(107, 143, 121);
+    color:black
+  }
+
+  table.courses td {
+    background-color:lightgray;
+    color: rgb(43, 40, 40)
+  }
+
+    .collapsible {
+  background-color: rgb(150, 150 , 150);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #637a6b;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+  </style>
+  
+ 
+
+<h4>Cursos Abiertos</h4>
+
+<div></div>
+{{{listarcursosinteresado}}}
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+
+
+    </script>
+
+<h4>Inscripción</h4>
+<p>
+<strong>Ingrese los datos de inscripción a continuación</strong>
+</p> 
+
+ <form action="/paginaResultInscripcion" method="post"> 
+  <table>
+ 
+   <tr>
+       <td>
+         Documento de Identidad<br> 
+         <input type="number" name="docidentidad" min="100000" required><br> 
+       </td>
+       <td>
+         Correo electrónico:<br> 
+         <input type="email" name="correo" required><br> 
+       </td>
+   </tr>
+ 
+   <tr>
+       <td>
+           Nombre del aspirante:<br> 
+           <input type="text" name="nombre" required><br> 
+       </td>
+       <td>
+           Teléfono:<br> 
+           <input type="number" name="telefono" min="1000000" required><br> 
+       </td>
+   </tr>
+ 
+    <tr>
+       <td>
+           (seleccione un curso):<br> 
+            <select id="mySelect" name="listacursos" onchange="myFunction()">
+                {{{ValoresSelectCursos}}}
+            </select>
+       </td>
+       <td>
+           Id del Curso:<br>
+           <!--p id="leido"></p-->
+           <input type="number" id="idc" name="idcurso" value=1 readonly><br> 
+       </td>
+   </tr>
+
+
+  </table>
+ 
+<!--  https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onchange-->
+
+
+<!--p id="leido"></p-->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+
+ <input type="submit" value="Enviar"> 
+ </form> 
+
+{{>footer}}
+

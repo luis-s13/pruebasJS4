@@ -1,0 +1,49 @@
+{{>header}}
+
+<p>
+ 
+  
+{{accionIdCurso idTemp cursoTemp modalidadTemp costoTemp descripcionTemp intensidadTemp}}
+</p> 
+
+
+ <style>
+
+  table.courses th {
+    background-color: rgb(107, 143, 121);
+    color:black
+  }
+
+  table.courses td {
+    background-color:lightgray;
+    color: rgb(43, 40, 40)
+  }
+  </style>
+   
+  
+  <br>
+  
+  <table class="courses">
+
+{{{listarcursosadmin}}}
+<!--
+    <tr>
+      <td>{{idTemp}}</td>
+      <td>{{cursoTemp}}</td>
+      <td>{{descripcionTemp}}</td>
+      <td>{{costoTemp}}</td>
+      <td>{{modalidadTemp}}</td>
+      <td>{{intensidadTemp}}</td>
+      <td>Disponible</td>
+    </tr>
+    -->
+   </tbody>
+  </table>
+
+  <form action="/InicioCoordinador" method="post">
+
+     <button class="btn btn-dark">Regresar a la página inicial del coordinador</button>
+
+ </form>
+
+{{>footer}}

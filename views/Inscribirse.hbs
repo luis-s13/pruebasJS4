@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <!-- THIS LINE -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <title>Cursos de Extensión</title> 
+	<link href="css/basic.css" rel="stylesheet"type="text/css">	
+</head>
+<body>
+<header>
+<img src="/img/tdeaLogo.PNG" alt="Logo TdeA">
+
+<h2>Inscripciones</h2>
+<p>
+<strong>Ingrese los datos de inscripción a continuación</strong>
+
+</p>
+ <form action="/BDpaginaResultInscripcion" method="post"> 
+  <table>
+ 
+   <tr>
+       <td>
+         Documento de Identidad<br> 
+         <input type="number" name="docidentidad" min="100000" value={{documento}}  required><br> 
+       </td>
+       <td>
+         Correo electrónico:<br> 
+         <input type="email" name="correo" value={{correo}} required><br> 
+       </td>
+   </tr>
+ 
+   <tr>
+       <td>
+           Nombre del aspirante:<br> 
+           <input type="text" name="nombre" value={{nombre}} required><br> 
+       </td>
+       <td>
+           Teléfono:<br> 
+           <input type="number" name="telefono" min="1000000" value={{telefono}} required><br> 
+       </td>
+   </tr>
+ 
+    <tr>
+       <td>
+           (seleccione un curso):<br> 
+            <select id="mySelect" name="listacursos" onchange="myFunction()">
+                {{{BDvaloresSelectCursos listadoCursos}}}
+            </select>
+       </td>
+       <td>
+           Id del Curso:<br>
+           
+           <input type="number" id="idc" name="idcurso" value=1 readonly><br> 
+       </td>
+   </tr>
+
+
+  </table>
+ 
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        //document.getElementById("leido").innerHTML =x;
+        document.getElementById("idc").value = x;
+        //alert(x);
+      }
+    </script>
+
+<button class="btn btn-info">Enviar inscripción</button>
+ </form> 
+<div>
+  <form action="/BDOfertaAspirante" method="post">
+     <button class="btn btn-dark">Regresar a Oferta</button>
+ </form>
+</div>
+  <div>
+    <form action="/salir" method="get">
+       <button class="btn btn-secondary">Salir</button>
+    </form>
+  </div>
+<footer>
+ 
+	<p>Derechos reservados</p>
+	Dirección: Calle 78B No. 72A - 220 Medellín - Colombia - Suramérica<br>  
+    Horario de atención al público<br> 
+    7:30 a.m. a 12:00 m. y  de 1:00 p.m. a 5:30 p.m. 
+    de lunes a jueves, los viernes de 7:30 a.m. a 12:00 m. y 1:00 p.m. a 4:30 p.m. 
+    <br><strong>Webmaster:Luis Diaz</strong> 
+
+</footer>
+
+</body>
+</html>
